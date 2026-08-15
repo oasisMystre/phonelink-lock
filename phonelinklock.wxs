@@ -1,0 +1,17 @@
+<Wix xmlns="http://wixtoolset.org/schemas/v4/wxs">
+  <Package Name="PhoneLinkLock" Manufacturer="PhoneLinkLock" Version="1.0.0.0" UpgradeCode="b05e3240-4c74-4b47-9f4a-875f56477cc6" Scope="perUser">
+    <MajorUpgrade DowngradeErrorMessage="A newer version of PhoneLinkLock is already installed." />
+
+    <StandardDirectory Id="LocalAppDataFolder">
+      <Directory Id="INSTALLFOLDER" Name="PhoneLinkLock">
+        <Component Id="PhoneLinkLockExe" Guid="98b7dc32-2342-493a-8742-0fbc35851411">
+          <File Source="build\Release\PhoneLinkLock.exe" KeyPath="yes" />
+        </Component>
+      </Directory>
+    </StandardDirectory>
+
+    <Feature Id="MainFeature" Title="PhoneLinkLock" Level="1">
+      <ComponentRef Id="PhoneLinkLockExe" />
+    </Feature>
+  </Package>
+</Wix>

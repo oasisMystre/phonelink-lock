@@ -1,0 +1,33 @@
+# Build directories and outputs
+/build/
+/bin/
+/obj/
+/out/
+
+# Visual Studio specific files
+.vs/
+*.user
+*.suo
+*.sln.docstates
+
+# CMake specific files
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+*.cmake
+
+# Generated scripts and temporary files
+Setup.cs
+*~*.DDF
+*.wixobj
+*.wixpdb
+*.pdb
+*.msi
+*.exe
+
+# Keep scripts and config files
+!build.bat
+!build.ps1
+!build_setup.ps1
+!build_installer.sed
